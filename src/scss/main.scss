@@ -1,13 +1,156 @@
 @import "~normalize.css";
 
-@import "_variables";
-@import "modules/hello.scss";
+
+html {
+  box-sizing: border-box;
+}
+* , *:before, *:after {
+ box-sizing: inherit;
+}
 
 body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  background-color:#8DA9C4;
 }
+
+.common-header {
+  min-height:60px;
+  position:fixed;
+  top:0;
+  width:100%;
+}
+
+.navigation {
+  background:#FBF5F3;
+  display:none;
+  &--open {
+  display:block;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.header {
+  background:#e3d87e;;
+  padding:3em;
+  
+  &__description {
+      color:#423B0B;
+  }
+  &__subtitle {
+      color:#064789;
+      margin-top:10px;
+  }
+  
+  &__title {
+      color:#064789;
+      margin-top:10px;
+      margin-bottom:10px ;
+  }
+  &__picture {
+      display:block;
+      max-width:100%;
+  
+}
+}
+
+.find-out {
+  border:3px solid #695D12;
+  border-radius:20px;
+  max-width: 300px;
+  min-height:400px;
+  margin:20px;
+  padding:1em;
+  background:#DACD58;
+  &__title {
+      &::before {
+          content:"🚐";
+          display:inline-block; 
+          margin:0 10px 0 0;
+       }
+  } 
+  &__picture {
+      width:100%;   
+  }
+}
+
+
+.footer {
+  text-align:center;
+}
+
+.hamburger {
+  position:absolute;
+  top:20px;
+  right:10px;
+}
+
+.main {
+  margin:60px auto 0;
+  &__header {
+  background:#FAF2A1;
+  }
+}
+
+
+.navigation__link {
+  color:#695D12;
+  display:block;
+  margin: 0 0 16px;
+  &:hover {
+      color:#214E34;
+  }
+}
+
+
+@media screen and (min-width:768px){
+  .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1400px;
+    margin: 0 auto;
+    }
+    .navigation {
+      display:flex;
+      border-radius:10px;
+      padding:2em;
+      margin:1em;
+      justify-content:space-around;
+      align-items:center;
+      &__link {
+          font-size: 20px;
+          }
+  }
+
+  .hamburger {
+      display:none;
+  }
+  .header {
+      display:flex;
+      justify-content:space-around;
+      &__title {
+      font-size: 70px;
+    }
+  }
+  
+  .main {
+      margin: 130px auto 0;
+      
+  }
+}
+
+@media (min-width:590px) and (max-width:767px) {
+  .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      max-width:767px;
+      margin:0 auto;
+ }
+  .header {
+      display:flex;
+      justify-content:space-around;
+ }
+}
+
