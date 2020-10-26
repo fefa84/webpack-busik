@@ -1,10 +1,10 @@
-![cover](/gh/busik-website.png)
+![cover](gh/busik-website.png)
 
 # Tadziobus
 
 Strona internetowa Tadziobus oferująca przewóz osób
 
-## How to use it?
+## Jak otworzyć?
 
 Najpierw wpisz komendę `npm install`, a potem masz następujące opcje:
 
