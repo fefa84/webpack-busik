@@ -1,4 +1,4 @@
-![cover](gh/busik-website.png)
+![cover](/gh/busik-website.png)
 
 # Tadziobus
 
